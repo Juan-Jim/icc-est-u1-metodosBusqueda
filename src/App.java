@@ -1,4 +1,5 @@
-import controllers.MetodosBusqueda;
+import controllers.MetodoDeBusquedaBinario;
+//simport controllers.MetodosBusqueda;
 import models.Person;
 
 public class App {
@@ -12,21 +13,18 @@ public class App {
         personas[5] = new Person(106, "Sofia");
         personas[6] = new Person(107, "Pedro");
 
-        MetodosBusqueda mB = new MetodosBusqueda(personas);
-    
+        //MetodosBusqueda mB = new MetodosBusqueda(personas);
+        
+        MetodoDeBusquedaBinario buscador = new MetodoDeBusquedaBinario(personas);
+        buscador.mostrarNombresOrdenados();
 
-        /*
-        int[] numeros = {10, 20, 30, 40, 50};
-        int elementoABuscar = 30;
+        MetodoDeBusquedaBinario mBB =  new MetodoDeBusquedaBinario(personas);
+        mBB.showPersonByName();
+    
         
-        int resultado = buscador.busquedaLineal(numeros, elementoABuscar);
+
         
-        if (resultado != -1) {
-            System.out.println("Elemento encontrado en la posición: " + resultado);
-        } else {
-            System.out.println("Elemento no encontrado en el arreglo");
-        }
-            */
+        
     }
            
 
