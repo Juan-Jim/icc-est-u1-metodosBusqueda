@@ -1,32 +1,33 @@
-import java.util.Scanner;
+import controllers.MetodosBusqueda;
+import models.Person;
 
 public class App {
-    MetodoBusqueda metodosBusqueda = new MetodoBusqueda();
-
     public static void main(String[] args) {
-        App app = new App(); 
-        Scanner leer = new Scanner(System.in);
+        Person[] personas = new Person[7];
+        personas[0] = new Person(101, "Juan");
+        personas[1] = new Person(102, "Maria");
+        personas[2] = new Person(103, "Carlos");
+        personas[3] = new Person(104, "Ana");
+        personas[4] = new Person(105, "Luis");
+        personas[5] = new Person(106, "Sofia");
+        personas[6] = new Person(107, "Pedro");
 
-        System.out.print("¿Ponga los elementos que tendra el arreglo?: ");
-        int n = leer.nextInt();
-        int[] arreglo = new int[n];
+        MetodosBusqueda mB = new MetodosBusqueda(personas);
+    
 
-        for (int i = 0; i < n; i++) {
-            System.out.print("Elemento " + (i + 1) + ": ");
-            arreglo[i] = leer.nextInt();
-        }
-
-        System.out.print("Ingresa el elemnto que desea buscar: ");
-        int valor = leer.nextInt();
-
-        int resultado = app.metodosBusqueda.busquedaLineal(arreglo, valor);
-
+        /*
+        int[] numeros = {10, 20, 30, 40, 50};
+        int elementoABuscar = 30;
+        
+        int resultado = buscador.busquedaLineal(numeros, elementoABuscar);
+        
         if (resultado != -1) {
-            System.out.println("El elemento se encuentra en la posición: " + resultado);
+            System.out.println("Elemento encontrado en la posición: " + resultado);
         } else {
-            System.out.println("Elemento no encontrado.");
+            System.out.println("Elemento no encontrado en el arreglo");
         }
-
-        leer.close();
+            */
     }
+           
+
 }
